@@ -1,0 +1,10 @@
+body { 
+    font-family: sans-serif; background-color: #f4f5f7; margin: 0; 
+}
+nav{
+    background: #026aa7;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
