@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("")
+mongoose.connect("mongodb+srv://bhardwajnirav7_db_user:dhM7VmIyn6E1oAmV@100xapps.dn8hxou.mongodb.net/trello")
 const userSchema = mongoose.Schema({
     username: String,
     password: String

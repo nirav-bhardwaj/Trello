@@ -227,4 +227,4 @@ app.delete("/members", authMiddleware, async(req, res) => {
     })
 })
 
-app.listen(3500);
+app.listen(3000);

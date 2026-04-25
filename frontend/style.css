@@ -6,5 +6,83 @@ nav{
     color: white;
     padding: 10px 20px;
     display: flex;
+    justify-content: space-around;
+}
+.hero {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+.auth-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.auth-container button{
+    width: 100%;
+    padding: 10px;
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #0067a3; /* Trello Blue */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.org-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.org-card:hover {
+    background: #ebecf0;
+}
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
 }

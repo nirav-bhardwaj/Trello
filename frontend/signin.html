@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Trello</h2>
+        <input type="text", id="username", placeholder="username">
+        <input type="password" id="password", placeholder="password">
+        <button onclick="signIn()">log in</button>
+
+    </div>
+    <script>
+        async function signIn() {
+    const email = document.getElementById('username').value; // Usually use email for MERN auth
+    const password = document.getElementById('password').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/signin', { // Ensure port matches your backend
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Save token to localStorage for later use in organization.html
+            localStorage.setItem('token', data.token);
+            alert('Login successful!');
+            window.location.href = 'organization.html'; // Redirect to dashboard
+        } else {
+            alert(data.message || 'Login failed');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Could not connect to server');
+    }
+}
+    </script>
+</body>
+</html>
