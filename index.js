@@ -2,6 +2,8 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const { authMiddleware } = require("./middleware")
 const { userModel, organizationModel } = require("./models");
+const cors = require('cors');
+
 
 let BOARD_ID = 1;
 let ISSUES_ID = 1;
@@ -12,6 +14,7 @@ const ISSUES = [];
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // CREATE
 app.post("/signup", async(req, res) => {

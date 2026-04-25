@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="board-page">
+    <nav class="navbar">
+        <div class="logo">Trello</div>
+        <button onclick="window.location.href='organization.html'">Back to Dashboard</button>
+    </nav>
+
+    <header class="board-header">
+        <h2 id="board-title">Loading Board...</h2>
+        <button class="btn-add-list" onclick="showListModal()">+ Add another list</button>
+    </header>
+
+    <main class="lists-container">
+    <div class="list-column">
+        <div class="list-header">To Do</div>
+        <div class="card">Setup Project</div>
+        <button class="btn-add-card">+ Add a card</button>
+    </div>
+</main>
+    <!-- <main class="lists-container" id="lists-wrapper">
+        <div class="list-column">
+            <div class="list-header">To Do</div>
+            <div class="cards-list">
+                <div class="card">Setup Project</div>
+                <div class="card">Configure MongoDB</div>
+            </div>
+            <button class="btn-add-card">+ Add a card</button>
+        </div>
+    </main> -->
+
+    <script src="board-logic.js"></script>
+</body>
+</html>
